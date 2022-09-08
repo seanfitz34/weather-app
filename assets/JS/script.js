@@ -74,10 +74,10 @@ function buildDisplaySearch(cityData) {
 }
 
 function buildForcast(forcastData) {
-  console.log(forcastData);
-  var five = forcastData.list;
-  for (let i = 0; i < five.length; five++) {
-    console.log(five);
+  var futureForcastList = forcastData.list;
+  for (let i = 1; i < 6; i++) {
+    const day = futureForcastList[i];
+    console.log(day);
   }
 }
 
