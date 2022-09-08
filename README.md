@@ -8,7 +8,7 @@ A simple weather app to find the weather in whatever city searched. My api is ou
 
 ## Images
 
-![pic](./assets/images/IMG_1056%20Small.jpeg)
+![picture](./assets/Images/IMG_1056%20Small.jpeg)
 
 
 ## License
