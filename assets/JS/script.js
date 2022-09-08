@@ -75,11 +75,10 @@ function buildDisplaySearch(cityData) {
 
 function buildForcast(forcastData) {
   console.log(forcastData);
-  var fiveDayForecastone = forcastData.list;
-
-  var fiveDayForecast1 = document.createElement("h3");
-  fiveDayForecastone.textContent = fiveDayForecast1;
-  forecast.appendChild(fiveDayForecast1);
+  var five = forcastData.list;
+  for (let i = 0; i < five.length; five++) {
+    console.log(five);
+  }
 }
 
 searchBtn.addEventListener("click", getUserInput);
