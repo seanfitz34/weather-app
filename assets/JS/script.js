@@ -52,13 +52,34 @@ function fetchForcast(lat, lon) {
 function buildDisplaySearch(cityData) {
   console.log(cityData);
   var name = cityData.name;
-  var temperature = cityData.main.temp;
-  var humidity = cityData.main.humidity;
-  var wind = cityData.wind.speed;
+  var temperature = "Temperature is:" + cityData.main.temp + "°F";
+  var humidity = "Humidity is:" + cityData.main.humidity + "%";
+  var wind = "Wind:" + cityData.wind.speed + "km/h";
+
+  var dsName = document.createElement("h2");
+  dsName.textContent = name;
+  displaySearch.appendChild(dsName);
+
+  var dsTemp = document.createElement("h3");
+  dsTemp.textContent = temperature;
+  displaySearch.appendChild(dsTemp);
+
+  var dsHum = document.createElement("h3");
+  dsHum.textContent = humidity;
+  displaySearch.appendChild(dsHum);
+
+  var dsWind = document.createElement("h3");
+  dsWind.textContent = wind;
+  displaySearch.appendChild(dsWind);
 }
 
 function buildForcast(forcastData) {
-  // console.log(forcastData);
+  console.log(forcastData);
+  var fiveDayForecastone = forcastData.list;
+
+  var fiveDayForecast1 = document.createElement("h3");
+  fiveDayForecastone.textContent = fiveDayForecast1;
+  forecast.appendChild(fiveDayForecast1);
 }
 
 searchBtn.addEventListener("click", getUserInput);
