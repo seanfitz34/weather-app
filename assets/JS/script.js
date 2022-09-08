@@ -74,12 +74,11 @@ function buildDisplaySearch(cityData) {
 }
 
 function buildForcast(forcastData) {
-  console.log(forcastData);
-  var fiveDayForecastone = forcastData.list;
-
-  var fiveDayForecast1 = document.createElement("h3");
-  fiveDayForecastone.textContent = fiveDayForecast1;
-  forecast.appendChild(fiveDayForecast1);
+  var futureForcastList = forcastData.list;
+  for (let i = 1; i < 6; i++) {
+    const day = futureForcastList[i];
+    console.log(day);
+  }
 }
 
 searchBtn.addEventListener("click", getUserInput);
