@@ -1,9 +1,9 @@
 // global Variables
 //  apiKey = 9539ef3d12e637ffcaf99d047bb46263
 var searchBtn = document.querySelector("#search-btn");
-
+var history = document.querySelector("#history-container");
 var seachHistory = document.querySelector("#search-history");
-
+var input = document.querySelector("#input");
 var displaySearch = document.querySelector("#section2");
 var forecast = document.querySelector("#section3");
 var fiveDay = document.querySelector("#section-4");
@@ -13,6 +13,7 @@ function getUserInput() {
   var userInput = document.querySelector("#input").value;
   fetchCurrentWeather(userInput);
 }
+
 // fetching City weather
 function fetchCurrentWeather(city) {
   var url =
@@ -32,6 +33,7 @@ function fetchCurrentWeather(city) {
       fetchForcast(lat, lon);
     });
 }
+
 // function to get lat, lon of city search
 function fetchForcast(lat, lon) {
   var url =
@@ -49,6 +51,22 @@ function fetchForcast(lat, lon) {
       buildForcast(data);
     });
 }
+// local storage
+
+function addToArray(userInput) {
+  citySearchArr.push(userInput);
+  addToLocalStorage();
+}
+
+function getLocalStorage() {
+  citySearchArr = JSON.parse(localStorage.getItem("CityList"));
+}
+function addToLocalStorage() {
+  localStorage.setItem("CityList", citySearchArr);
+}
+
+console.log(localStorage);
+
 // function to display 5 day forcast
 function buildDisplaySearch(cityData) {
   // console.log(cityData);
