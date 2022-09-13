@@ -17,7 +17,7 @@ function getUserInput() {
 // fetching City weather
 function fetchCurrentWeather(city) {
   var url =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
     "&units=imperial&appid=73e30e235368e0da0d19b61f0af2e5d3";
 
@@ -37,7 +37,7 @@ function fetchCurrentWeather(city) {
 // function to get lat, lon of city search
 function fetchForcast(lat, lon) {
   var url =
-    "http://api.openweathermap.org/data/2.5/forecast?lat=" +
+    "https://api.openweathermap.org/data/2.5/forecast?lat=" +
     lat +
     "&lon=" +
     lon +

@@ -6,6 +6,9 @@ A simple weather app to find the weather in whatever city searched. My api is ou
 
 ## Live Link
 
+## Repo Link
+https://github.com/seanfitz34/weather-app 
+
 ## Images
 
 ![picture](./assets/Images/IMG_1056%20Small.jpeg)
